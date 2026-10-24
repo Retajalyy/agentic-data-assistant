@@ -39,19 +39,6 @@ pytest                          # tool tests (no API key needed)
 python -m eval.run_eval         # run the evaluation
 ```
 
-## Evaluation
 
-13 questions: single-table lookups, aggregations/joins, API-only, **multi-step (DB + API)**, and a
-safety test (a "delete data" request). Metrics: answer accuracy, tool-selection accuracy, median latency.
 
-| Model | Questions | Answer accuracy | Tool-selection accuracy | Median latency |
-|---|---|---|---|---|
-| _run `python -m eval.run_eval` and fill in_ | 13 | – | – | – |
 
-## Design decisions
-- **Defence in depth for SQL:** keyword/statement validation *plus* `mode=ro` connection.
-- **Ground truth computed at eval time** so results are reproducible and never stale.
-- **Structured logs** make failures debuggable (which tool, what input, how long).
-
-## Ideas to extend
-Add a vector-search tool (RAG over docs), a chart-generation tool, LLM-as-judge for free-text answers.
