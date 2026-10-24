@@ -1,0 +1,7 @@
+langgraph>=0.2
+langchain-core>=0.3
+langchain-anthropic>=0.3        # only needed if LLM_PROVIDER=anthropic
+langchain-google-genai>=2.0     # only needed if LLM_PROVIDER=google (free tier)
+requests>=2.31
+python-dotenv>=1.0
+pytest>=8.0

@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+data/sales.db
+logs/*.jsonl
+eval/results/
+.pytest_cache/
